@@ -17,11 +17,12 @@ class Recipe(custom.GStreamerStatic):
         --disable-pvr --disable-sdl --disable-sndfile --disable-soundtouch \
         --disable-teletextdec --disable-timidity \
         --disable-vdpau --disable-voamrwbenc --disable-wildmidi \
-        --disable-xvid --disable-zbar --disable-sdi --disable-hls --disable-qt'
+        --disable-xvid --disable-zbar --disable-sdi --disable-hls --disable-qt \
+        --enable-rtmp'
     remotes = {'origin': 'git://anongit.freedesktop.org/gstreamer/gst-plugins-bad'}
     commit = 'b26301bc8dc2c085c1a9ac045378149c880fc185'
     deps = ['gstreamer-1.0', 'gst-plugins-base-1.0', 'zlib', 'openh264', 'opus',
-            'libsrtp', 'openssl', 'graphene']
+            'libsrtp', 'openssl', 'graphene', 'librtmp']
     use_system_libs = True
 
     files_plugins_effects_devel = [
